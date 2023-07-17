@@ -364,7 +364,10 @@ on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http:
 generated that includes both content as well as the output of any
 embedded R code chunks within the document. You can embed an R code
 chunk like this:</p>
-<pre class="r"><code>my_data&lt;- escalc(n1i = n_controls, n2i = n_patients, m1i = mean_controls, m2i = mean_patients,sd1i = sd_controls, sd2i = sd_patients, data = my_data, measure = &quot;SMD&quot;,append=TRUE)
+<pre class="r"><code>my_data&lt;- escalc(n1i = n_controls, n2i = n_patients,
+                 m1i = mean_controls, m2i = mean_patients,
+                 sd1i = sd_controls, sd2i = sd_patients, 
+                 data = my_data, measure = &quot;SMD&quot;,append=TRUE)
 ma_model_1 &lt;- rma(yi, vi, data = my_data)
 print(summary(ma_model_1))</code></pre>
 <pre><code>## 
